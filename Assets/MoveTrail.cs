@@ -8,7 +8,10 @@ public class MoveTrail : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        //Move the bullet trail to the right by the moveSpeed
         transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
+
+        //Destroy after 2 seconds
         Destroy(this.gameObject, 2);
 	}
 }
